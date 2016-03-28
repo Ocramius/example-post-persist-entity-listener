@@ -3,6 +3,7 @@
 namespace ExamplePostPersistEntityListener\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ExamplePostPersistEntityListener\NotifiableInterface;
 
 /**
  * @ORM\Entity
