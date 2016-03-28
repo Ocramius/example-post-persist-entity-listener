@@ -2,5 +2,15 @@
     "require": {
         "php":          "^5.5 || ^7.0",
         "doctrine/orm": "^2.5"
+    },
+    "autoload": {
+        "classmap": [
+            "NotifiableInterface.php",
+            "NotificationServiceInterface.php",
+            "VarDumpNotificationService.php",
+            "NotifiableEntityChangeListener.php",
+            "Entity/MyNotifiableEntity.php",
+            "Entity/MyOtherEntity.php"
+        ]
     }
 }
