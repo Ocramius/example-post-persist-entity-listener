@@ -22,6 +22,11 @@ class MyNotifiableEntity implements NotifiableInterface
     public $aCollection;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    public $aField = '';
+
+    /**
      * {@inheritDoc}
      */
     public function getRecipients()
