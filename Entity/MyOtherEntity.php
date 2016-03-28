@@ -1,6 +1,6 @@
 <?php
 
-namespace ExamplePostPersistEntityListener;
+namespace ExamplePostPersistEntityListener\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
