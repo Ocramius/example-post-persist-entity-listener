@@ -19,5 +19,5 @@ class MyNotifiableEntity
     /**
      * @ORM\Column(type="string")
      */
-    public $aField;
+    public $aField = '';
 }
