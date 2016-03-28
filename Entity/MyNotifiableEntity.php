@@ -2,6 +2,7 @@
 
 namespace ExamplePostPersistEntityListener\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use ExamplePostPersistEntityListener\NotifiableInterface;
 
@@ -26,6 +27,11 @@ class MyNotifiableEntity implements NotifiableInterface
      * @ORM\Column(type="string")
      */
     public $aField = '';
+
+    public function __construct()
+    {
+        $this->aCollection = new ArrayCollection();
+    }
 
     /**
      * {@inheritDoc}
