@@ -31,3 +31,9 @@ $entity3->aField = 'changed value';
 var_dump('Flush #3:');
 
 $entityManager->flush();
+
+$entity2->aCollection->add($entity3);
+
+var_dump('Flush #4:');
+
+$entityManager->flush();
