@@ -12,7 +12,7 @@ class MyNotifiableEntity implements NotifiableInterface
 {
     /**
      * @ORM\Id
-     * @ORM\Column(type=integer)
+     * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     public $id;
