@@ -30,6 +30,10 @@ $entityManager = EntityManager::create(
     $configuration
 );
 
+$entityManager
+    ->getEventManager()
+    ->addEventSubscriber(new NotifiableEntityChangeListener(new VarDumpNotificationService()));
+
 $schemaTool = new SchemaTool($entityManager);
 
 $schemaTool->updateSchema($entityManager->getMetadataFactory()->getAllMetadata());
