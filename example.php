@@ -37,3 +37,13 @@ $entity2->aCollection->add($entity3);
 var_dump('Flush #4:');
 
 $entityManager->flush();
+
+$entity2->aCollection->removeElement($entity3);
+
+var_dump('Flush #5:');
+
+$entityManager->flush();
+
+var_dump('Flush #6:');
+
+$entityManager->flush();
