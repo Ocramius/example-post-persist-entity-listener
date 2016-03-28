@@ -24,3 +24,10 @@ $entityManager->flush();
 var_dump('Flush #2:');
 
 $entityManager->flush();
+
+$entity1->aField = 'changed value';
+$entity3->aField = 'changed value';
+
+var_dump('Flush #3:');
+
+$entityManager->flush();
