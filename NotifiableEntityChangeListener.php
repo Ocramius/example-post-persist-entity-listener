@@ -43,7 +43,7 @@ final class NotifiableEntityChangeListener implements EventSubscriber
 
         foreach (array_merge($unitOfWork->getScheduledEntityInsertions(), $unitOfWork->getScheduledEntityUpdates()) as $changedEntity) {
             if ($changedEntity instanceof NotifiableInterface) {
-                $this->changedNotifiables[] = $changedEntity;
+                $this->changedNotifiables[spl_object_hash($changedEntity)] = $changedEntity;
             }
         }
 
@@ -52,7 +52,7 @@ final class NotifiableEntityChangeListener implements EventSubscriber
             $changedEntity = $collection->getOwner();
 
             if ($changedEntity instanceof NotifiableInterface) {
-                $this->changedNotifiables[] = $changedEntity;
+                $this->changedNotifiables[spl_object_hash($changedEntity)] = $changedEntity;
             }
         }
     }
